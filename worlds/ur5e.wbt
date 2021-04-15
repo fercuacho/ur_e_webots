@@ -1,0 +1,36 @@
+#VRML_SIM R2021a utf8
+WorldInfo {
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation -0.7237097097737861 0.5102161369130619 0.4646759619483816 0.7272547807849846
+  position 1.6214283969677212 3.4630564100757573 6.134262975589502
+}
+Floor {
+}
+Table {
+  translation 1 0 0
+  size 0.5 0.5 0.4
+}
+DEF brick SolidBox {
+  translation 0.9 0.6 0
+  size 0.2 0.2 0.2
+}
+DirectionalLight {
+  direction 0 -1 0
+}
+DEF robot UR5e {
+  hidden position_0_0 0.017133899800044972
+  hidden rotation_1 0 0 1 0.01713389980003392
+  hidden position_1_0 -0.5633461699104343
+  hidden rotation_2 0 0.9999999999999999 0 1.007449830089566
+  hidden position_2_0 -0.016972961203986614
+  hidden rotation_3 0 -1 0 0.016972961203973617
+  hidden position_3_0 -1.2183912703686346
+  hidden rotation_4 0 1 0 0.35240472963136615
+  hidden position_4_0 -7.490225803863382e-05
+  hidden rotation_5 0 0 -1 7.49022605184233e-05
+  hidden position_5_0 2.237210700297117
+  hidden rotation_6 0 0.9999999999999999 0 2.237210700297117
+  controller "<extern>"
+}

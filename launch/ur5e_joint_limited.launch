@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="prefix" default="" doc="Prefix to robot's joints' and links' names" />
+
+  <env name="LD_LIBRARY_PATH" value="$(env LD_LIBRARY_PATH):$(env WEBOTS_HOME)/lib/controller"/>
+  <env name="PYTHONPATH" value="$(env PYTHONPATH):$(env WEBOTS_HOME)/lib/controller/python27" unless="$(eval '1' if env('ROS_DISTRO') == 'noetic' else '0')"/>
+  <env name="PYTHONPATH" value="$(env PYTHONPATH):$(env WEBOTS_HOME)/lib/controller/python38" if="$(eval '1' if env('ROS_DISTRO') == 'noetic' else '0')"/>
+
+  <include file="$(find ur_e_webots)/launch/ur5e.launch">
+    <arg name="limited" value="true"/>
+    <arg name="prefix" value="$(arg prefix)"/>
+  </include>
+</launch>
